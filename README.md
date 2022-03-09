@@ -1,6 +1,6 @@
 # Stack MERN 
 mongoDB
-Express
+ExpressJS
 React
 NodeJS
 
