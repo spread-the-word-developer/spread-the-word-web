@@ -6,7 +6,7 @@ NodeJS
 
 # Steps to start
 
-## Sirst time 
+## First time 
 1) make sure you have NodeJS installed
 2) clone the repository to your local machine
 3) cd into /backend and run "npm i"
