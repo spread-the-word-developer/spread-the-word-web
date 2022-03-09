@@ -1,4 +1,4 @@
-# Stack MERN 
+# Stack: MERN 
 mongoDB
 ExpressJS
 React
