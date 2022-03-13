@@ -1,7 +1,6 @@
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-//TODO add mongoDB database uri 
-const uri = "";
+const uri = require('./config/keys');
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
     const collection = client.db("test").collection("devices");
