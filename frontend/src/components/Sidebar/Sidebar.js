@@ -32,22 +32,22 @@ return(
             </div>
             <div className = "menu_list_container">
 
-                <NavLink to = "/">
+                <NavLink to = "/services">
                     <li className = "nav_list_item">
                         About Us - Services
                     </li>
                 </ NavLink>
-                <NavLink to = "/">
+                <NavLink to = "/mission">
                     <li className = "nav_list_item">
                         About Us - Mission
                     </li>
                 </ NavLink>
-                <NavLink to = "/">
+                <NavLink to = "/team">
                     <li className = "nav_list_item">
                         Team
                     </li>
                 </ NavLink>
-                <NavLink to = "/">
+                <NavLink to = "/contact">
                     <li className = "nav_list_item">
                         Contact
                     </li>

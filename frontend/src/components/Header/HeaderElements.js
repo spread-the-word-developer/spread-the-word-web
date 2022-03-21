@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 
 export const NavLink = styled(Link)`
-    text-decoration: none;
     color: black;
+    text-decoration: none;
     &.active {
-        color: rgb(172,172,172);
+        text-decoration: underline;
     }
     &.visited{
         color: black;

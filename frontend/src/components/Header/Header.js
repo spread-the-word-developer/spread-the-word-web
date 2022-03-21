@@ -1,6 +1,6 @@
 
 import style from './Header.module.css';
-import './HeaderElements';
+import { NavLink } from './HeaderElements';
 
 
 const Header = ({toggle}) => {
@@ -9,8 +9,16 @@ const Header = ({toggle}) => {
         <div className = {style.header_container}>
             <div className = {style.grid_container}>
 
-                
+                <div className = {style.bars_container}>
+                    <svg className = {style.bars_icon} onClick= {toggle} >
+                            <path fill-rule="evenodd" fill="rgb(25, 17, 11)" d="M-0.000,-0.000 L20.000,-0.000 L20.000,2.000 L-0.000,2.000 L-0.000,-0.000 Z"></path>
+                            <path fill-rule="evenodd" fill="rgb(25, 17, 11)" d="M-0.000,8.000 L15.000,8.000 L15.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"></path>
+                            <path fill-rule="evenodd" fill="rgb(25, 17, 11)" d="M-0.000,16.000 L20.000,16.000 L20.000,18.000 L-0.000,18.000 L-0.000,16.000 Z"></path>
+                    </svg>  
+                </div>      
+                        
                 <div className = {style.header_logo_container}>
+                   
                     <div className = {style.header_logo} onClick = {toggle}>
                         <img src = "./pictures/SpreadTheWord-Logo-png.webp" alt = "logo"/>
                     </div>
@@ -30,6 +38,32 @@ const Header = ({toggle}) => {
                             </div> 
                         </div>
                     </ a>
+                </div>
+                <div className  = {style.navbar_items_container}>
+                    <div className = {style.nav_list_container}>
+
+                        <NavLink to = "/books">
+                            <li className = {style.nav_list_item}>
+                                Books
+                            </li>
+                        </ NavLink>
+                        <NavLink to = "/authors">
+                            <li className = {style.nav_list_item}>
+                                Authors
+                            </li>
+                        </ NavLink>
+                        <NavLink to = "/contests">
+                            <li className = {style.nav_list_item}>
+                                Contests
+                            </li>
+                        </ NavLink>
+                        <NavLink to = "/send">
+                            <li className = {style.nav_list_item}>
+                                Send us
+                            </li>
+                        </ NavLink>
+
+                    </div>
                 </div>
 
             </div>
