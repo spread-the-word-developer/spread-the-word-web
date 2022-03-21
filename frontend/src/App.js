@@ -16,7 +16,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
 
-  const [menuCollapse, setMenuCollapse] = useState(false);
+  const [menuCollapse, setMenuCollapse] = useState(true);
 
   const menuIconClick = () => {
       console.log("collapsed: ",menuCollapse);
