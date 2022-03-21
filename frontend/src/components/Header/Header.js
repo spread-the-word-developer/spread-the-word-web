@@ -1,30 +1,31 @@
 
-import './Header.css';
+import style from './Header.module.css';
+import './HeaderElements';
 
 
-function Header() {
+const Header = ({toggle}) => {
   return (
-    <div className="header"> 
-        <div className = "header-container">
-            <div className = "grid-container">
+    <div className={style.header}> 
+        <div className = {style.header_container}>
+            <div className = {style.grid_container}>
+
                 
-                
-                <div className = "header-logo-container">
-                    <div className = "header-logo">
+                <div className = {style.header_logo_container}>
+                    <div className = {style.header_logo} onClick = {toggle}>
                         <img src = "./pictures/SpreadTheWord-Logo-png.webp" alt = "logo"/>
                     </div>
                 </div>
 
-                <div className ="header-inner-container">
-                    <a className= "logo-texts" href = "https://www.spreadthewordbooks.com/">
+                <div className ={style.header_inner_container}>
+                    <a className = {style.logo_texts} href = "https://www.spreadthewordbooks.com/">
                         <div className = "page-title-container">
-                            <div className ="page-title-text">
+                            <div className = {style.page_title_text}>
                                 <span> SPREAD THE WORD </span>
                                 
                             </div>
                         </div>
-                        <div className = "page-slogan-container">
-                            <div className ="page-slogan-text">
+                        <div className = {style.page_slogan_container}>
+                            <div className = {style.page_slogan_text}>
                                 The Digital Book Publisher
                             </div> 
                         </div>

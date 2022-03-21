@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Footer from './components/Footer/Footer';
-import Taskbar from './components/Taskbar/Taskbar';
+import { useState } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Home from './components/pages/home/Home';
@@ -10,15 +10,26 @@ import Send from './components/pages/send/Send';
 import Services from './components/pages/services/Services';
 import About from './components/pages/about/About';
 import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+
 
 
 function App() {
+
+  const [menuCollapse, setMenuCollapse] = useState(false);
+
+  const menuIconClick = () => {
+      console.log("collapsed: ",menuCollapse);
+      menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+  };
+
+
+
   return (
     <div className = "App">
       <Router>
-
-        <Taskbar />
-        <Header />
+          <Sidebar menuCollapse = {menuCollapse} toggle = {menuIconClick}/>
+          <Header toggle = {menuIconClick} />
           <Routes>
 
             <Route path = '' element = {<Home />}/>

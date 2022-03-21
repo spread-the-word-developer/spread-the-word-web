@@ -1,6 +1,6 @@
 
 
-.taskbar-container{
+.taskbar_container{
     width: 140px;
     height: 100%;
     
@@ -14,7 +14,7 @@
     
 }
 
-.nav-list-item-container{
+.nav_list_item_container{
     --item-height: 30px;
     text-align: left;
     /*font-family: "normal normal normal 17px/1.4em barlow-medium,barlow,sans-serif";*/
@@ -23,9 +23,9 @@
    
 }
 
-.nav-list-item{
+.nav_list_item{
     padding-bottom: 11px;
 }
-.nav-list-item:hover{
+.nav_list_item:hover{
     color: rgb(172,172,172);
 }

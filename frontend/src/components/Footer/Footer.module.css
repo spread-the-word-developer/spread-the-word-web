@@ -1,9 +1,9 @@
-.footer-container{
+.footer_container{
     height: 470px;
 }
 
 
-.follow-container{
+.follow_container{
     font-family: barlow-medium,barlow,sans-serif;
     font-size: 30px;
     text-align: left;
@@ -11,13 +11,13 @@
     
 }
 
-.bar-container{
+.bar_container{
     padding-top: 5px;
     height: 10px;
    
 }
 
-.media-container{
+.media_container{
     height: 275px;
     width: 900px;
     
@@ -26,7 +26,7 @@
 
 }
 
-.media-grid-container{
+.media_grid_container{
     padding-top: 60px;
     display: grid;
    
@@ -35,27 +35,24 @@
     width: 100%;
 }
 
-.grid-item {
+.grid_item {
     width: 300px;
     
   
 }
-.grid-item-title{
+.grid_item_title{
     font-size: 17px;
     color: rgb(21,93,233);
     font-family: normal normal normal 17px/1.4em barlow-medium,barlow,sans-serif;
     padding-bottom: 45px;
 }
 
-.social-media-list-container{
-
-}
-.social-media-list{
+.social_media_list{
     display: inline-block;
     text-decoration: none;
  
 }
-.social-media-list-item{
+.social_media_list_item{
     display: inline-block;
     text-decoration: none;
     padding-left: 5px;
@@ -63,22 +60,22 @@
     
 }
 
-.form-container{
+.form_container{
     width: 211px;
     height: 30px;
     margin: 0 auto;
 }
-.form-container:hover{
+.form_container:hover{
     background-color: rgb(1, 80, 1);
 }
 
-.form-item{
+.form_item{
     width: 100%;
     background: transparent;
     text-decoration: none;
 }
 
-.form-button{
+.form_button{
     width: 209px;
     height: 40px;
     
@@ -87,23 +84,23 @@
     border: none;    
 }
 
-.form-button:hover{
+.form_button:hover{
     background-color: rgb(1, 80, 1);
 }
-.form-button-text{
+.form_button_text{
     color: white;
     
 }
 
-.email-link{
+.email_link{
     text-decoration: none;
     color: black;
 }
-.email-link:visited{
+.email_link:visited{
     text-decoration: none;
 }
 
-.copyright-container{
+.copyright_container{
 
     width:900px;
     margin: 0 auto;
@@ -117,7 +114,7 @@
 
 
 @media only screen and (min-width:980px){
-    .follow-container{
+    .follow_container{
         padding-left:5%;
     }
     

@@ -1,43 +1,42 @@
 
-import './Footer.css';
-
+import style from './Footer.module.css'
 
 function Footer() {
   return (
-    <div className="footer"> 
-        <div className = "footer-container">
-            <div className = "follow-container">
+    <div className={style.footer}> 
+        <div className = {style.footer_container}>
+            <div className = {style.follow_container}>
                 <span>
                     FOLLOW US
                 </span>
             </div>
-            <div className = "bar-container">
+            <div className = {style.bar_container}>
 
             </div>
 
-            <div className = "media-container">
-              <div className = "media-grid-container">
+            <div className = {style.media_container}>
+              <div className = {style.media_grid_container}>
 
 
-                <div className = "grid-item">
+                <div className = {style.grid_item}>
 
-                  <div className = "grid-item-title">
+                  <div className = {style.grid_item_title}>
                     <span>SOCIAL MEDIA</span>
                   </div>
 
-                  <div className = "social-media-list-container">
-                    <div className =  "social-media-list">
-                      <li className =  "social-media-list-item">
+                  <div className = {style.social_media_list_container}>
+                    <div className =  {style.social_media_list}>
+                      <li className =  {style.social_media_list_item}>
                         <a href = "https://www.instagram.com/spreadthewordbookpublisher/?hl=es" target = "_blank">
                           <img src = 'pictures/insta.webp' alt = "instagram link" />
                         </a> 
                       </li>
-                      <li className =  "social-media-list-item">
+                      <li className =  {style.social_media_list_item}>
                         <a href = "https://twitter.com/SpreadtheWordEd" target = "_blank">
                           <img src = "pictures/twitter.webp" alt = "twitter link" />
                         </a> 
                       </li>
-                      <li className =  "social-media-list-item">
+                      <li className =  {style.social_media_list_item}>
                         <a href = "https://www.linkedin.com/company/spread-the-word-book-publisher" target = "_blank">
                           <img src = "pictures/linkedin.webp" alt = "linkedin link"/>
                         </a> 
@@ -48,19 +47,19 @@ function Footer() {
                 </div>
 
 
-                <div className = "grid-item">
-                  <div className = "grid-item-title">
+                <div className = {style.grid_item}>
+                  <div className = {style.grid_item_title}>
                     <span> SUBSCRIBE </span>
                   </div>
-                  <div className = "form-container">
+                  <div className = {style.form_container}>
 
-                    <form className = "form-item" >
+                    <form className = {style.form_item} >
                       <input type = "text" id = "email" placeholder = "Enter your email here*" />
                     </form>
                   </div>
 
-                  <button className = "form-button">
-                    <span className = "form-button-text">
+                  <button className = {style.form_button}>
+                    <span className = {style.form_button_text}>
                       SUBSCRIBE
                     </span>
                   </button>
@@ -69,19 +68,19 @@ function Footer() {
                 </div>
 
 
-                <div className = "grid-item">
-                  <div className = "grid-item-title">
+                <div className = {style.grid_item}>
+                  <div className = {style.grid_item_title}>
                     <span>OR SEND US AN EMAIL</span>
                   </div>
-                  <a className = "email-link" href = "mailto:TODO@ENTEREMAILHERE.com">
-                    <div className = "email-link-text">
+                  <a className = {style.email_link} href = "mailto:TODO@ENTEREMAILHERE.com">
+                    <div className = {style.email_link_text}>
                       spreadthewordeditorial@gmail.com
                     </div>
                   </a>
                 </div>
               </div>
             </div>
-            <div className = "copyright-container">
+            <div className = {style.copyright_container}>
             © 2021 Spread the Word Editorial
             </div>
         </div>

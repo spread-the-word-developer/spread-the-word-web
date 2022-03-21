@@ -1,9 +1,9 @@
-.header-container{
+.header_container{
     width: 100%;
     height: 121px;
     
 }
-.header-inner-container{
+.header_inner_container{
     width: 100%;
     height: 70px;
     
@@ -11,14 +11,14 @@
     padding-bottom:25px;
    
 }
-.grid-container{
+.grid_container{
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 3fr;
   
 }
 
-.header-logo-container{
+.header_logo_container{
     
     height: 70px;
     width:110px;
@@ -28,31 +28,31 @@
     padding-left: 10%;
     
 }
-.logo-texts{
+.logo_texts{
     text-align: left;
     text-decoration: none;
 }
-.logo-texts:visited{
+.logo_texts:visited{
     color: inherit;
 }
-.page-title-container{
+.page_title_container{
     padding-top: 12px;
     white-space: nowrap;
     overflow: hidden;
     
 }
-.page-title-text{
+.page_title_text{
     font-size: 29px;
     font-family: "normal normal normal 56px/1.4em barlow-medium,barlow,sans-serif";
     line-height:1.2em;
     letter-spacing:0.05em;
 }
 
-.page-slogan-container{
+.page_slogan_container{
     padding-top: 6px;
     
 }
-.page-slogan-text{
+.page_slogan_text{
     font-size: 11px;
     line-height:1.1em;
     letter-spacing:0.23em;
@@ -60,7 +60,7 @@
 }
 
 @media only screen and (min-width:980px){
-    .header-logo-container{
+    .header_logo_container{
         margin-left: 5%;
     }
     
