@@ -11,15 +11,15 @@ const Header = ({toggle}) => {
 
                 <div className = {style.bars_container}>
                     <svg className = {style.bars_icon} onClick= {toggle} >
-                            <path fill-rule="evenodd" fill="rgb(25, 17, 11)" d="M-0.000,-0.000 L20.000,-0.000 L20.000,2.000 L-0.000,2.000 L-0.000,-0.000 Z"></path>
-                            <path fill-rule="evenodd" fill="rgb(25, 17, 11)" d="M-0.000,8.000 L15.000,8.000 L15.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"></path>
-                            <path fill-rule="evenodd" fill="rgb(25, 17, 11)" d="M-0.000,16.000 L20.000,16.000 L20.000,18.000 L-0.000,18.000 L-0.000,16.000 Z"></path>
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M-0.000,-0.000 L20.000,-0.000 L20.000,2.000 L-0.000,2.000 L-0.000,-0.000 Z"></path>
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M-0.000,8.000 L17.000,8.000 L17.000,10.000 L-0.000,10.000 L-0.000,8.000 Z"></path>
+                            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M-0.000,16.000 L20.000,16.000 L20.000,18.000 L-0.000,18.000 L-0.000,16.000 Z"></path>
                     </svg>  
                 </div>      
                         
                 <div className = {style.header_logo_container}>
                    
-                    <div className = {style.header_logo} onClick = {toggle}>
+                    <div className = {style.header_logo} >
                         <img src = "./pictures/SpreadTheWord-Logo-png.webp" alt = "logo"/>
                     </div>
                 </div>
