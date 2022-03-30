@@ -32,25 +32,30 @@ function EmailSubmission() {
             <div className = {style.container}>
                 <div className = {style.inner_container}>
                     <div className = {style.title_text}>
-                        title
+                        JOIN OUR NEWSLETTER
                     </div>
-                    <div className = {style.sub_tittle_text}>
-                        sub title
+                    <div className = {style.sub_title_text}>
+                        Sign up for our newsletter to stay up to date with all our news
                     </div>
                     
                     <div className = {style.submission_container}>
-                        <input 
-                         className = {style.textbox}
-                         type="email"
-                         id = "input_text"
-                         name = "input_text"
-                         value = {emails.input_text}
-                         onChange = {handleInputChange}>
-                             
+                        <div className = {style.textbox_container}>
+                            <div className = {style.submission_inner_container}>
+                                <input 
+                                className = {style.textbox}
+                                type="email"
+                                id = "input_text"
+                                name = "input_text"
+                                value = {emails.input_text}
+                                onChange = {handleInputChange}
+                                placeholder = "Enter your email">
+                                    
 
-                        </input>
+                                </input>
+                            </div>
+                        </div>
                         <button className = {style.submit_butn} onClick = {handleSubmit}>
-                            submit
+                            Subscribe
                         </button>
                     </div>
                 </div>
