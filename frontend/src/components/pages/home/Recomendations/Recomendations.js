@@ -8,17 +8,41 @@ import Card from './Card/Card';
 function Recomendations() {
 
     const[Cards, setCards] = useState([])
+    const[Author, setAuthor] = useState([])
 
     useEffect(()=>{
         async function fetchCards(){
             const req = await axios.get('/api/publication/get-all');
             console.log(req);
-            setCards(req.data);
+            var cardDicArray = [];
+            
+            for (var i = 0 ; i < req.data.length; i++){
+                var cardDic = {};
+                cardDic.id = req.data[i]._id;
+                cardDic.bookName = req.data[i].title;
+                const authorNames =  await getAuthor(req.data[i].authorID);
+                console.log("author name: ",authorNames);
+                cardDic.authorName = authorNames;
+                cardDic.thumbnailLink = req.data[i].thumbnailLink;
+                cardDicArray.push(cardDic);
+            }
+            console.log("card dic: ",cardDicArray)
+            await setCards(cardDicArray);
+            
         }
+       
         console.log("called");
         fetchCards();
     },[]);
 
+
+    async function getAuthor(id) {
+        console.log("getting author: ",id);
+        const filt = "hey";
+        const req = await axios.get("api/author/get-authors/"+id);
+        console.log("author response: ",req);
+        return (req.data[0].firstName +" "+ req.data[0].otherNames);
+    }
 
    const handleClick = (e) => {
 
@@ -39,8 +63,9 @@ function Recomendations() {
         <div>
             <Card authorname = "authors name" bookname = "bookname" imageLink = "/files/publications/thumbnails/orange-book.webp"/>
             {Cards.map((card) => {
+               
                 return(
-                <Card authorname = {card.authorID} bookname = {card.title} imageLink = {card.thumbnailLink} />
+                <Card authorname = {card.authorName} bookname = {card.bookName} imageLink = {card.thumbnailLink} publicationID = {card.id}/>
                 )
             })}
         </div>

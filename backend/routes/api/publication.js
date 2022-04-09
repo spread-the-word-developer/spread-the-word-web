@@ -11,6 +11,11 @@ router.get('/get-all', (req,res) => {
     Publication.find().then(publications => res.json(publications));
     
 });
+router.get('/get/:id', (req,res) => {
+    console.log("get one.....");
+    Publication.find({_id:req.params.id}).then(publications => res.json(publications));
+    
+});
 
 router.post('/create', async(req,res) => {
     
