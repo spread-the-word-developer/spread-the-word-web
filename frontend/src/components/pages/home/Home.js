@@ -13,7 +13,8 @@ function Home() {
   return (
     <div className="Home">
       <EmailSubmission />
-      <Card authorname = "author names" bookname = "book name" imageLink = "pictures/orange-book.webp"/>
+      <Recomendations />
+      
     </div>
     );
 }

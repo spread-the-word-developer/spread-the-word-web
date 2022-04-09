@@ -20,35 +20,42 @@ const PublicationSchema = new Schema({
 
 
     //TODO link infomation -- thumbnail? where to buy? download link? 
-
+    thumbnailLink:{
+        type: String,
+        required: true
+    },
+    downloadLink:{
+        type: String,
+        required: true
+    },
 
     //TODO publication infomation
     isbn: {
-        type = String,
-        required = true
+        type : String,
+        required : true
     },
     publicationDate: {
         type: Date,
         required: true
     },
     noPages: {
-        type: integer,
+        type: Number,
         required: true
     },
     language: {
         type: String,
-        required= true
+        required: true
     },
     originalLanguage: {
         type: String,
-        required = true
+        required : true
     },
     format: {
         type: String,
         required: true
     },
     price: {
-        type: float,
+        type: Number,
         required: true
     }
 
