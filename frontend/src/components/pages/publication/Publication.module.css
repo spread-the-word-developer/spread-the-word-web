@@ -35,7 +35,8 @@
 .book_main_container{
     height: 100%;
     
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: calc(5%);
     margin-top: 0px;
     margin-bottom: 0px;
 }
