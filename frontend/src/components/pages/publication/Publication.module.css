@@ -1,0 +1,91 @@
+.publication{
+    text-align: left;
+}
+.top_container{
+    height:auto;
+    width:100%;
+    background-color: blueviolet;
+    padding-bottom: 50px;
+    margin-top:50px;
+       
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+
+
+
+.thumbnail_container{
+    text-align: center;
+    height: 100%;
+    background-color: red;
+}
+.image_item{
+    object-fit:fill;
+    width: 350px ;
+    
+}
+
+
+
+
+.book_main_container{
+    height: 100%;
+    background-color: violet;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.title_author{
+    font-size: 31px !important;
+    line-height: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.book_title{
+    font-size: 37px !important;
+    line-height: 41px;
+    font-family: "Sabon", serif !important;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.book_description{
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.author_main_container{
+    height: 100%;
+    background-color: wheat;
+}
+.author_name{
+    color: #6f76c7 !important;
+    font-family: "Sabon", serif !important;
+    font-weight: 100;
+    font-size: 21px !important;
+    line-height: 21px;
+    margin-bottom:20px;
+}
+.author_description{
+    font-size: 14px;
+    line-height: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+    
+}
+.author_link{
+    font-size: 14px;
+    line-height: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.author_link:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
