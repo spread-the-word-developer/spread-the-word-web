@@ -20,9 +20,14 @@ function Publication() {
         console.log("author id: ", authorID)
         
         //author data
-        const respAuthor = await axios.get("/api/author/get-authors/"+authorID);
+        var respAuthor = await axios.get("/api/author/get-authors/"+authorID);
         
         console.log("fetching data for author: ",respAuthor.data[0]);
+
+        //substring author info string
+        respAuthor.data[0].info = respAuthor.data[0].info.substring(0,500)+"...";
+
+
         setBookData(resp.data[0]);
         setAuthorData(respAuthor.data[0])
       }
@@ -63,7 +68,7 @@ function Publication() {
               {authorData.firstName + " " + authorData.otherNames}
             </div>
             <div className= {style.author_description}>
-              {authorData.info.substring(0, 500)+"..."}
+              {authorData.info}
             </div>
             <div className={style.author_link}>
               author link

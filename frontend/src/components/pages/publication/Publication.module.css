@@ -1,16 +1,18 @@
 .publication{
     text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .top_container{
     height:auto;
     width:100%;
-    background-color: blueviolet;
+    
     padding-bottom: 50px;
     margin-top:50px;
        
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1.2fr 1.8fr 1fr;
 }
 
 
@@ -19,7 +21,7 @@
 .thumbnail_container{
     text-align: center;
     height: 100%;
-    background-color: red;
+    
 }
 .image_item{
     object-fit:fill;
@@ -32,7 +34,7 @@
 
 .book_main_container{
     height: 100%;
-    background-color: violet;
+    
     margin: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -60,7 +62,7 @@
 
 .author_main_container{
     height: 100%;
-    background-color: wheat;
+    
 }
 .author_name{
     color: #6f76c7 !important;
