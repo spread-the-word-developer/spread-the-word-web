@@ -20,7 +20,7 @@ const Header = ({toggle}) => {
                 <div className = {style.header_logo_container}>
                    
                     <div className = {style.header_logo} >
-                        <img src = "./pictures/SpreadTheWord-Logo-png.webp" alt = "logo"/>
+                        <img src = "/pictures/SpreadTheWord-Logo-png.webp" alt = "logo"/>
                     </div>
                 </div>
 
