@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
+import Recomendations from './../home/Recomendations/Recomendations'
 
 
 
@@ -11,7 +12,8 @@ function Publication() {
   let params = useParams();
   
   const[bookData, setBookData] = useState([]);
-  const[authorData, setAuthorData] = useState([])
+  const[authorData, setAuthorData] = useState([]);
+
 
   useEffect(() => {
       async function fetchPublication(id){
@@ -31,7 +33,6 @@ function Publication() {
         //substring author info string
         respAuthor.data[0].info = respAuthor.data[0].info.substring(0,500)+"...";
 
-
         setBookData(resp.data[0]);
         setAuthorData(respAuthor.data[0])
       }
@@ -42,7 +43,7 @@ function Publication() {
   
     //get the id passed through
     //display the product data
-  },[]);
+  },[params.id]);
 
 
   return (
@@ -68,7 +69,7 @@ function Publication() {
             </div>
 
             <div className={style.download_container}>
-              <a href = {`http://localhost:5000/`+bookData.downloadLink} download = "bookname.pdf"><i className="fa fa-download"></i> Download</a>
+              <a className={style.download_link} href = {`http://localhost:5000/`+bookData.downloadLink} download = "bookname.pdf" target="_blank"><i className="fa fa-download"></i> Download</a>
                 
             </div>
           </div>
@@ -84,7 +85,9 @@ function Publication() {
             </div>
           </div>
         </div>
+        <Recomendations dontInclude = {params.id} />
     </div>
+
     );
 }
 

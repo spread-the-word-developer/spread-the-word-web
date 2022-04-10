@@ -13,7 +13,7 @@ function Home() {
   return (
     <div className="Home">
       <EmailSubmission />
-      <Recomendations />
+      <Recomendations dontInclude = {null} />
       
     </div>
     );

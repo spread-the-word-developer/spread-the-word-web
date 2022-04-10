@@ -3,3 +3,11 @@
     width: 100%;
     background-color: aqua;
 }
+.cards_container{
+    display: flex;
+    margin:50px;
+
+}
+.card_item{
+     
+}

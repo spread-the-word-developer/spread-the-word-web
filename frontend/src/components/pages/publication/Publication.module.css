@@ -59,6 +59,21 @@
     line-height: 22px;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.download_link{
+    color: #6f76c7 !important;
+    display: block;
+    float: left;
+    
+}
+.download_link:visited{
+    text-decoration: none;
+    color: #6f76c7 !important;
+}
+.download_link:hover{
+    text-decoration:none;
 }
 
 .author_main_container{
@@ -87,6 +102,7 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     text-decoration: underline;
+    color: #6f76c7 !important;
 }
 .author_link:hover{
     text-decoration: none;
