@@ -22,6 +22,7 @@ app.use(express.static(__dirname));
 
 app.use('/files', express.static(path.join(__dirname, 'files')));
 app.use('/files/publications/thumbnails', express.static(path.join(__dirname, 'files','publications','thumbnails')));
+app.use('/files/publications/PDF', express.static(path.join(__dirname, 'files','publications','PDF')));
 /*
 app.get('*', (req, res)=> {
     res.sendFile(path.join(__dirname, '../frontend/build/index.html'))

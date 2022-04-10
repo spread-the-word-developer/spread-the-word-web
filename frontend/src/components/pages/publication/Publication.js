@@ -3,6 +3,10 @@ import style from  './Publication.module.css';
 import axios from 'axios';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import 'font-awesome/css/font-awesome.min.css';
+
+
+
 function Publication() {
   let params = useParams();
   
@@ -61,6 +65,11 @@ function Publication() {
             </div>
             <div className={style.book_description}>
               {bookData.desc}
+            </div>
+
+            <div className={style.download_container}>
+              <a href = {`http://localhost:5000/`+bookData.downloadLink} download = "bookname.pdf"><i className="fa fa-download"></i> Download</a>
+                
             </div>
           </div>
           <div className={style.author_main_container}>
