@@ -36,7 +36,7 @@ function Publication() {
         setBookData(resp.data[0]);
         setAuthorData(respAuthor.data[0])
       }
-  
+    window.scrollTo(0, 0);
     console.log("props: ",params);
     fetchPublication(params.id);
   //console.log("props: ",props.location.aboutProps);
@@ -47,7 +47,7 @@ function Publication() {
 
 
   return (
-    <div className= {style.publication}>
+    <div className= {style.publication} id = 'top'>
        
         <div className= {style.top_container}>
 
@@ -84,6 +84,9 @@ function Publication() {
               author link
             </div>
           </div>
+        </div>
+        <div className= {style.recomendations_text}>
+          Recomended
         </div>
         <Recomendations dontInclude = {params.id} />
     </div>

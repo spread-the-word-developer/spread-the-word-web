@@ -13,8 +13,8 @@ const Card = (props) => {
     function handleClick(){
         alert("clicked")
         const link = "/publication/"+props.publicationID
-        
         navigate(link);
+        
     }
 
     return (

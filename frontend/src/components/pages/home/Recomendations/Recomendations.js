@@ -70,11 +70,13 @@ function Recomendations(props) {
 
     return (
         <div>
+            {/*
         <div className={style.Recomendations_inner}>
             <button onClick = {handleClick}>
                 bigggg button
             </button>
         </div>
+    */}
         <div className= {style.cards_container}>
             
             {Cards.map((card) => {
