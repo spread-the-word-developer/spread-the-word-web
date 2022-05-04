@@ -7,6 +7,7 @@ import style from './News.module.css'
 
 
 function News(props){
+    
 return (
     //news listed newest first 
     //contains the title "news" folled by,
@@ -21,20 +22,21 @@ return (
                     NEWS
                 </div>
                 <div className={style.news_title}>
-
+                    {props.title}
                 </div>
                 <div className={style.news_description}>
-
+                    {props.description}
                 </div>
 
                 <div className = {style.html_code}>
+                    {props.html_code}
                 </div> 
 
             </div>
 
             <div className={style.right_container}>
                 <div className={style.news_image}>
-
+                    <img className = {style.image} src = "https://via.placeholder.com/150"></img>
                 </div>
             </div>
         </div>
