@@ -43,7 +43,7 @@ router.post('/create', async(req,res) => {
     const authorFirstName = "testAuthor7";
     const authorOtherName = "testAuthorSecondName7";
     const authorInfo = "this is author info7: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat faucibus ex in sollicitudin. Vestibulum bibendum iaculis est ut suscipit. Phasellus nisl odio, tincidunt ac mattis in, fringilla et nisi. Pellentesque aliquam, leo eget sodales imperdiet, mi libero aliquam enim, sit amet molestie justo metus et sapien. Proin scelerisque nec leo vitae tristique. Pellentesque sodales nisi imperdiet, semper metus eu, tempus nisl. Maecenas orci turpis, porta et nisl id, vestibulum aliquam justo. Nullam tempor luctus lectus non hendrerit. Curabitur id nulla aliquam, sodales nulla in, maximus neque. Sed vitae efficitur ex, sit amet ornare orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ex ut nulla semper molestie eget ut est. Aenean eget massa nec lorem consectetur rhoncus vel ut nunc."
-
+    const imageLink = "/files/authors/thumbnails/placeholder.jpeg"
     const description = "this is description7:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat faucibus ex in sollicitudin. Vestibulum bibendum iaculis est ut suscipit. Phasellus nisl odio, tincidunt ac mattis in, fringilla et nisi. Pellentesque aliquam, leo eget sodales imperdiet, mi libero aliquam enim, sit amet molestie justo metus et sapien. Proin scelerisque nec leo vitae tristique. Pellentesque sodales nisi imperdiet, semper metus eu, tempus nisl. Maecenas orci turpis, porta et nisl id, vestibulum aliquam justo. Nullam tempor luctus lectus non hendrerit. Curabitur id nulla aliquam, sodales nulla in, maximus neque. Sed vitae efficitur ex, sit amet ornare orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in ex ut nulla semper molestie eget ut est. Aenean eget massa nec lorem consectetur rhoncus vel ut nunc.";
 
     const thumbnailLink = "/";
@@ -55,6 +55,7 @@ router.post('/create', async(req,res) => {
     const originalLanguage = "english";
     const format = "pdf";
     const price = 0;
+    const downloads = 0
 
 
     //if author exists then add book and author id 
@@ -70,7 +71,8 @@ router.post('/create', async(req,res) => {
         const newAuthor = new Author({
             firstName: authorFirstName,
             otherNames: authorOtherName,
-            info: authorInfo
+            info: authorInfo,
+            image: imageLink
         });
 
         await newAuthor.save();
@@ -98,6 +100,7 @@ router.post('/create', async(req,res) => {
             originalLanguage:originalLanguage,
             format:format,
             price:price,
+            downloads: 0,
    
         });
         console.log("1");

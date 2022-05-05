@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import Recomendations from './../home/Recomendations/Recomendations'
-
+import { Link } from 'react-router-dom';
 
 
 function Publication() {
@@ -88,14 +88,16 @@ function Publication() {
               {authorData.info}
             </div>
             <div className={style.author_link}>
-              author link
+              <Link to = {"/author/"+authorData._id}  >
+                author link
+              </Link>
             </div>
           </div>
         </div>
         <div className= {style.recomendations_text}>
           Recomended
         </div>
-        <Recomendations dontInclude = {params.id} />
+        <Recomendations id = {params.id} />
     </div>
 
     );

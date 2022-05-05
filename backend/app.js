@@ -6,6 +6,7 @@ const app = express();
 const emails= require('./routes/api/emailSubcription');
 const authors = require('./routes/api/author');
 const publications = require('./routes/api/publication');
+const news = require('./routes/api/news');
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 const db = require('./config/keys').mongoURI;
@@ -37,6 +38,7 @@ app.get('*', (req, res)=> {
 app.use('/api/emailSubscription/', emails);
 app.use('/api/author/', authors);
 app.use('/api/publication/',publications);
+app.use('/api/news/', news)
 
 
 app.listen(5000, () => {

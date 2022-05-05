@@ -10,15 +10,38 @@ import News from './News/News';
 import Carousel from '../../Carousel/Carousel';
 import Flickity from 'react-flickity-component'
 import BestSeller from './Recomendations/BestSeller';
+import NewsCard from '../../NewsCard/NewsCard';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import axios from 'axios';
 
 const flickityOptions = {
     initialIndex: 0
 }
+const flickityOptions2 = {
+  initialIndex: 0,
 
+}
 
 
 function Home() {
 
+  const[newsData, setNewsData] = useState([]);
+  
+
+  
+  useEffect(() => {
+    async function fetchData(){
+        
+        //author data
+        var resp = await axios.get("/api/news/get-all");
+ 
+        setNewsData(resp.data)
+    }
+    window.scrollTo(0, 0);
+    fetchData();
+    
+  },[]);
   const placeholder = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
   return (
@@ -48,6 +71,26 @@ function Home() {
             Recomendations
       </div>
       <Recomendations dontInclude = {null} />
+
+      <Flickity
+      className={'carousel'} // default ''
+      elementType={'div'} // default 'div'
+      options={flickityOptions2} // takes flickity options {}
+      disableImagesLoaded={false} // default false
+      reloadOnUpdate // default false
+      static // default false
+      
+      
+    >
+        
+        {newsData.map((news) => {
+               
+               return(
+               <NewsCard title = {news.title} image = {news.image} date = {news.date} description = {news.description} />
+               )
+        })}
+      </Flickity>
+      <div className = {style.seperator}></div>
       <div className = {style.card_list_title}>
             Best Seller
       </div>
