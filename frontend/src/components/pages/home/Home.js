@@ -9,6 +9,7 @@ import News from './News/News';
 
 import Carousel from '../../Carousel/Carousel';
 import Flickity from 'react-flickity-component'
+import BestSeller from './Recomendations/BestSeller';
 
 const flickityOptions = {
     initialIndex: 0
@@ -43,10 +44,14 @@ function Home() {
           
        
 
-      <div className = {style.recomendation_title}>
+      <div className = {style.card_list_title}>
             Recomendations
       </div>
       <Recomendations dontInclude = {null} />
+      <div className = {style.card_list_title}>
+            Best Seller
+      </div>
+      <BestSeller />
       <EmailSubmission />
       
     </div>

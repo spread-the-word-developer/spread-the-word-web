@@ -57,6 +57,10 @@ const PublicationSchema = new Schema({
     price: {
         type: Number,
         required: true
+    },
+    downloads: {
+        type: Number,
+        required: true
     }
 
 

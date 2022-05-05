@@ -11,12 +11,29 @@ router.get('/get-all', (req,res) => {
     Publication.find().then(publications => res.json(publications));
     
 });
+router.get('/get-first-five', (req,res) => {
+    console.log("get all.....");
+    Publication.find().limit(5).then(publications => res.json(publications));
+    
+});
+router.get('/get-first-five-most-downloads', (req,res) => {
+    console.log("get all.....");
+    Publication.find().sort({"downloads":-1}).limit(5).then(publications => res.json(publications));
+    
+});
 router.get('/get/:id', (req,res) => {
     console.log("get one.....");
     Publication.find({_id:req.params.id}).then(publications => res.json(publications));
     
 });
 
+router.post('/increment-downloads',(req,res) => {
+    console.log("incrementing downloads: ",req.body.id);
+    Publication.findByIdAndUpdate({_id : req.body.id}, {$inc: {'downloads': 1}}).then(publications => {
+        console.log("new publication ",publications)
+        res.json(publications)}
+        );
+})
 router.post('/create', async(req,res) => {
     
     

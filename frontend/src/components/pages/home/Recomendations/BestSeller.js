@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import style from './Recomendations.module.css'
 import Card from './Card/Card';
+import { FaBusinessTime } from 'react-icons/fa';
 
 
 
-function Recomendations(props) {
+function BestSeller(props) {
 
     const[Cards, setCards] = useState([])
     const[Author, setAuthor] = useState([])
 
     useEffect(()=>{
         async function fetchCards(){
-            const req = await axios.get('/api/publication//get-first-five');
+            const req = await axios.get('/api/publication//get-first-five-most-downloads');
             console.log(req);
             var cardDicArray = [];
             var max = req.data.length
@@ -90,4 +91,4 @@ function Recomendations(props) {
     );
 }
 
-export default Recomendations;
+export default BestSeller;

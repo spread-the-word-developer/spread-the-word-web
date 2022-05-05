@@ -14,7 +14,7 @@ function Publication() {
   const[bookData, setBookData] = useState([]);
   const[authorData, setAuthorData] = useState([]);
 
-
+  
   useEffect(() => {
       async function fetchPublication(id){
         //book data
@@ -46,6 +46,12 @@ function Publication() {
     //display the product data
   },[params.id]);
 
+  const handleDownload = async (event) => {
+    //update downloads to plus one
+    console.log("incrementing downloads")
+    var incrementDownloads= await axios.post("/api/publication/increment-downloads/", {id: params.id});
+
+  }
 
   return (
     <div className= {style.publication} id = 'top'>
@@ -70,7 +76,7 @@ function Publication() {
             </div>
 
             <div className={style.download_container}>
-              <a className={style.download_link} href = {`http://localhost:5000/`+bookData.downloadLink} download = "bookname.pdf" target="_blank"><i className="fa fa-download"></i> Download</a>
+              <a className={style.download_link} onClick = {handleDownload} href = {`http://localhost:5000/`+bookData.downloadLink} download = "bookname.pdf" target="_blank"><i className="fa fa-download"></i> Download</a>
                 
             </div>
           </div>
