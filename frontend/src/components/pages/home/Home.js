@@ -6,9 +6,13 @@ import Recomendations from './Recomendations/Recomendations';
 import Card from './Recomendations/Card/Card';
 import style from './Home.module.css'
 import News from './News/News';
-import Flickity from 'flickity';
-import Carousel from '../../Carousel/Carousel';
 
+import Carousel from '../../Carousel/Carousel';
+import Flickity from 'react-flickity-component'
+
+const flickityOptions = {
+    initialIndex: 0
+}
 
 
 
@@ -19,21 +23,24 @@ function Home() {
   return (
     <div className="Home">
 
-      <Carousel options={{
-              autoPlay: 4000,
-              pauseAutoPlayOnHover: true,
-              wrapAround: true,
-              fullscreen: true,
-              adaptiveHeight: true,
-            }}
-          >
-            {[
-          <News title = "Test Title" description = {placeholder} html_code = {<> </>}/>
-              ,
-          <News title = "Test Title2" description = {placeholder + "2"} html_code = {<> </>}/>
-            ]}
+<Flickity
+      className={'carousel'} // default ''
+      elementType={'div'} // default 'div'
+      options={flickityOptions} // takes flickity options {}
+      disableImagesLoaded={false} // default false
+      reloadOnUpdate // default false
+      static // default false
+    >
+      {[
+      <News title = "Test Title" description = {placeholder} html_code = {<> </>}/> ,
+      <News title = "Test Title2" description = {placeholder} html_code = {<> </>}/> ]}
+    </Flickity>
+            
+          
+              
+            
 
-          </Carousel>
+          
        
 
       <div className = {style.recomendation_title}>

@@ -38,6 +38,7 @@ function App() {
             <Route path = '/services' element = {<Services />}/>
             <Route path = '/About' element = {<About />}/>
             <Route  path = "/publication/:id"  exact element = {<Publication />}/>
+            
 
           </Routes>
         

@@ -36,9 +36,10 @@ function Publication() {
         setBookData(resp.data[0]);
         setAuthorData(respAuthor.data[0])
       }
-    window.scrollTo(0, 0);
-    console.log("props: ",params);
+    console.log("hello")
     fetchPublication(params.id);
+    window.scrollTo(0, 0);
+    //console.log("props: ",params);
   //console.log("props: ",props.location.aboutProps);
   
     //get the id passed through

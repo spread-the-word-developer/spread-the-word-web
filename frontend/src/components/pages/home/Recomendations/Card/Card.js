@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Card = (props) => {
     const navigate = useNavigate();
+    
     function handleClick(){
         alert("clicked")
         const link = "/publication/"+props.publicationID
