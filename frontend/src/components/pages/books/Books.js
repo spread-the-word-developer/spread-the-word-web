@@ -78,7 +78,7 @@ function Books(props) {
                 return(
         
                       <div className={style.card} >
-            <Link to = {"/publication/"+card.id}  >
+            <Link className = {style.link} to = {"/publication/"+card.id}  >
             <div className= {style.card_inner}>
                 <div className= {style.image_container}>
                     <img className = {style.image_item} src={`http://localhost:5000/`+card.thumbnailLink} alt="image thumbnail"/> 

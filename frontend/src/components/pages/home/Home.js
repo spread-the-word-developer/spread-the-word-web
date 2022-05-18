@@ -19,7 +19,7 @@ const flickityOptions = {
     initialIndex: 0
 }
 const flickityOptions2 = {
-  initialIndex: 0,
+  initialIndex: 1,
 
 }
 

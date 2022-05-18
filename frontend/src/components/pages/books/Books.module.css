@@ -40,6 +40,11 @@
     line-height: 23px;
     padding-top: 25px;
 }
+.link:visited{
+    text-decoration: none;
+    color: black;
+
+}
 .bookname_container{
     font-family: "Sabon", serif;
     font-size: 22px;
