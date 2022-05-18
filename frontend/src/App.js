@@ -13,6 +13,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Publication from './components/pages/publication/Publication';
 import Author from './components/pages/author/Author';
 import Books from './components/pages/books/Books';
+import Team from './components/pages/team/Team';
 
 
 
@@ -42,7 +43,7 @@ function App() {
             <Route  path = "/publication/:id"  exact element = {<Publication />}/>
             <Route  path = "/author/:id"  exact element = {<Author />}/>
             <Route path = '/books' element = {<Books />} />
-            
+            <Route path = '/team' element = {<Team />} />
 
           </Routes>
         
