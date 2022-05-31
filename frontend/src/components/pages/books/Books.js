@@ -12,7 +12,7 @@ function Books(props) {
 
     useEffect(()=>{
         async function fetchCards(){
-            const req = await axios.get('/api/publication//get-all');
+            const req = await axios.post('/api/publication/get-books-query',{search_query: "testbook4", page_number: 1});
             console.log(req);
             var cardDicArray = [];
             var max = req.data.length

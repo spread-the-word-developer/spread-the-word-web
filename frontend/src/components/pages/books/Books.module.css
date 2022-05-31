@@ -40,6 +40,10 @@
     line-height: 23px;
     padding-top: 25px;
 }
+
+.link{
+    color: black;
+}
 .link:visited{
     text-decoration: none;
     color: black;

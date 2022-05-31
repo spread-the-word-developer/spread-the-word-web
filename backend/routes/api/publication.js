@@ -27,6 +27,81 @@ router.get('/get/:id', (req,res) => {
     
 });
 
+//using a post request just so i can req.body
+//function to get the books may have search queries
+//may be sorted by some value
+//limit result size 
+//may have a page number
+var levenshtein = require('fast-levenshtein');
+
+router.post('/get-books-query', async (req,res) => {
+    
+    const search = req.body.search_query;
+    const page_number = req.body.page_number
+    const sort_by = req.body.sort_by;
+    const sort_direction = req.body.sort_direction
+    console.log("book query: ", search);
+
+    //get all the values from the publication, only get the first (50 books per page) * (page_number)*2
+    const numBooks = 50 * page_number * 2;
+    var booksUnfiltered = await Publication.find().then(publications => {
+        return publications;
+    });
+
+    //make a new array, within some limit of the levenshtein distance if searh query != null
+    //only add to the new array if greater than some threshhold
+    var booksArrayWithDistance = [];
+    
+    for (i = 0; i< booksUnfiltered.length; i++ ){
+        const bookname = booksUnfiltered[i].title
+        console.log(bookname);
+        booksArrayWithDistance.push({
+            _id: booksUnfiltered[i]._id,
+            title:booksUnfiltered[i].title,
+            authorID: booksUnfiltered[i].authorID,
+            desc: booksUnfiltered[i].desc,
+            thumbnailLink: booksUnfiltered[i].thumbnailLink,
+            downloadLink: booksUnfiltered[i].downloadLink,
+            isbn: booksUnfiltered[i].isbn,
+            publicationDate: booksUnfiltered[i].publicationDate,
+            noPages: booksUnfiltered[i].noPages,
+            language: booksUnfiltered[i].language,
+            originalLanguage: booksUnfiltered[i].originalLanguage,
+            format: booksUnfiltered[i].format,
+            price: booksUnfiltered[i].price,
+            __v: booksUnfiltered[i].__v,
+            downloads: booksUnfiltered[i].downloads,
+            levenshtein: levenshtein.get(search,bookname),
+        })
+    }
+
+    console.log("books filtered: ",booksArrayWithDistance)
+    if (search != null){
+           //sort by search
+           res.json(booksArrayWithDistance.sort((a, b) => (a.levenshtein > b.levenshtein) ? 1 : -1).slice(page_number-1,50*page_number));
+           return;
+    }
+
+    //if not searching then continue with old array
+    if (search === null){
+        if (sort_by === 'relevance'){
+            res.json(booksArrayWithDistance);
+            return;
+        }
+        if (sort_by === 'upload_date'){
+            res.json(booksArrayWithDistance.sort((a, b) => (a.publicationDate > b.publicationDate) ? 1 : -1).slice(page_number-1,50*page_number));
+           return;
+        }
+        if (sort_by === 'price'){
+            res.json(booksArrayWithDistance.sort((a, b) => (a.price > b.price) ? 1 : -1).slice(page_number-1,50*page_number));
+           return;
+        }
+    }
+
+    
+
+});
+
 router.post('/increment-downloads',(req,res) => {
     console.log("incrementing downloads: ",req.body.id);
     Publication.findByIdAndUpdate({_id : req.body.id}, {$inc: {'downloads': 1}}).then(publications => {
