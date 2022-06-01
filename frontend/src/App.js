@@ -14,7 +14,9 @@ import Publication from './components/pages/publication/Publication';
 import Author from './components/pages/author/Author';
 import Books from './components/pages/books/Books';
 import Team from './components/pages/team/Team';
-
+import Contests from './components/pages/contests/Contests';
+import Mission from './components/pages/mission/Mission';
+import Contact from './components/pages/contact/Contact';
 
 
 function App() {
@@ -44,6 +46,9 @@ function App() {
             <Route  path = "/author/:id"  exact element = {<Author />}/>
             <Route path = '/books' element = {<Books />} />
             <Route path = '/team' element = {<Team />} />
+            <Route path = '/contests' element = {<Contests />} />
+            <Route path = '/mission' element = {<Mission />} />
+            <Route path = '/contact' element = {<Contact />} />
 
           </Routes>
         
