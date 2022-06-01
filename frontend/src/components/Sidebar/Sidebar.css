@@ -26,14 +26,17 @@
     background-color: white;
     top: 0;
     left: 0;
+    visibility: visible;
     transition: 0.3s ease-in-out;
     white-space: nowrap;
     opacity: 100%;
 }
 #sidebar .sidebar_container.collapsed{
+    visibility: hidden;
     width: 0px;
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transition:  0.3s ease-in-out;
+    
     
 }
 
