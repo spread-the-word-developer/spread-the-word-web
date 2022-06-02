@@ -10,7 +10,7 @@ const news = require('./routes/api/news');
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 const db = require('./config/keys').mongoURI;
-
+require('dotenv').config();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
@@ -41,7 +41,7 @@ app.use('/api/publication/',publications);
 app.use('/api/news/', news)
 
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log("The server is running on port 5000")
 
 });
