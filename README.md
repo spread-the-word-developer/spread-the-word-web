@@ -16,42 +16,50 @@ note that these steps are for windows but similar steps should work on other os'
 
 1) make a new foder wherever youd like to hold the code base
 
+```
 mkdir spreadTheWord
+```
 
 2) make a new folder to host the backend repo and cd into it 
+```
 mkdir stwBackend
 cd stwBackend
-
+```
 3) clone the backend repository: https://github.com/spread-the-word-developer/stwWebBackend
 *note I dont remember if git clone links change so you may want to copy it from the site
-
+```
 git clone "https://github.com/spread-the-word-developer/stwWebBackend.git"
-
+```
 4) cd out and repeat for the front end repository: https://github.com/spread-the-word-developer/stwWebFrontend
+```
 cd ..
 mkdir stwFrontend
 cd stwFrontend
 git clone: "https://github.com/spread-the-word-developer/stwWebFrontend.git"
-
+```
 you now have the code base in your local next is the steps to run it
 1) cd into the frontend folder and run npm i
+```
 cd stwFrontend 
 npm i
-
+```
 2) do the same with the backend folder 
+```
 cd stwBackend 
 npm i
-
+```
 its going to get a bit more tricky now so follow along closely
 
 1) open up the code in your editor, I recomend doing this from outside both folders
 
 2) open up /stwBackend/app.js and look for this line of code
+```
 const db = require('./config/publicKeys').mongoURI;
-
+```
 change it to:
-
+```
 const db = require('./config/keys').mongoURI;
+```
 ^^^^^^^^^^^ make sure you never commit this change this is a temporary fix that ive been too lazy to adress
 then save
 3) make a new folder in stwBackend called config
@@ -64,11 +72,13 @@ then save
 we know need to set the process variables these steps work for windows hopefully they work for you
 
 8) run in the stwFrontend Folder
+```
 $env:REACT_APP_BACKEND_URL = "localhost:5000"
-
+```
 9) run in the stwBackend Folder
+```
 $env:FRONTEND_URL = "localhost:5000"
-
+```
 to check that they are set run $env:REACT_APP_BACKEND_URL or $env:FRONTEND_URL and you should see the value 
 
 ## running the code
@@ -76,10 +86,13 @@ to check that they are set run $env:REACT_APP_BACKEND_URL or $env:FRONTEND_URL a
 finally I think we can run it
 1) open up two seperate terminals and in the cd one into the backend folder 1) and the other in the frontend
 2) in the backend run
+```
 npm start 
+```
 3) in the frontend run 
+```
 npm start 
-
+```
 ^ this should launch a browser tab openend to localhost:3000/ and after its done compiling the webpage should be visable
 if the backend is also connected right then all components should be vissible and if you look at the backend terminal it should look as if the two are communicating
 
