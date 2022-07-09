@@ -1,12 +1,15 @@
 ## depreciated
 this repo is currently depreciated and now holds the setup for the new repos pleasse follow the steps belo to get started
 
-## prequisites
-before we start its important you have the correct prequisites installed
+## prerequisite
+before we start its important you have the correct prerequisite installed
 
 1) NodeJS 
 2) git 
 3) ide/editor of your choice but I recoment VSCode
+4) make sure you have contributor privelages/access to the github links:
+https://github.com/spread-the-word-developer/stwWebFrontend
+https://github.com/spread-the-word-developer/stwWebBackend
 
 ## now that we have the prequisites set up we can move onto setting up the local enviroment
 note that these steps are for windows but similar steps should work on other os's
