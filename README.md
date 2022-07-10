@@ -81,7 +81,7 @@ $env:REACT_APP_BACKEND_URL = "localhost:5000"
 ```
 9) run in the stwBackend Folder
 ```
-$env:FRONTEND_URL = "localhost:5000"
+$env:FRONTEND_URL = "localhost:3000"
 ```
 to check that they are set run $env:REACT_APP_BACKEND_URL or $env:FRONTEND_URL and you should see the value 
 
