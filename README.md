@@ -62,11 +62,15 @@ const db = require('./config/keys').mongoURI;
 ```
 ^^^^^^^^^^^ make sure you never commit this change this is a temporary fix that ive been too lazy to adress
 then save
+
 3) make a new folder in stwBackend called config
+
 4) make a new file in stwBackend/config called keys.js
+
 5) open up slack and in the web-development thread look under the pinned messaegs for the file keys.js
 
 6) copy its content into the one in your editor and save
+
 7) open up a new terminal and open /stwFrontend
 
 we know need to set the process variables these steps work for windows hopefully they work for you
