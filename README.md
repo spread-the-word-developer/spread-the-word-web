@@ -36,7 +36,7 @@ git clone "https://github.com/spread-the-word-developer/stwWebBackend.git"
 cd ..
 mkdir stwFrontend
 cd stwFrontend
-git clone: "https://github.com/spread-the-word-developer/stwWebFrontend.git"
+git clone "https://github.com/spread-the-word-developer/stwWebFrontend.git"
 ```
 you now have the code base in your local next is the steps to run it
 1) cd into the frontend folder and run npm i
