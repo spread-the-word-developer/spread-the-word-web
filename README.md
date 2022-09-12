@@ -75,7 +75,7 @@ then save
 7) open up a new terminal and open /stwFrontend
 
 we know need to set the process variables these steps work for windows hopefully they work for you
-
+*note these steps only work for me in the powershell terminal in vscode
 8) run in the stwFrontend Folder
 ```
 $env:REACT_APP_BACKEND_URL = "localhost:5000"
