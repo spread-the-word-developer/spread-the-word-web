@@ -41,12 +41,12 @@ git clone "https://github.com/spread-the-word-developer/stwWebFrontend.git"
 you now have the code base in your local next is the steps to run it
 1) cd into the frontend folder and run npm i
 ```
-cd stwFrontend 
+cd stwWebFrontend 
 npm i
 ```
 2) do the same with the backend folder 
 ```
-cd stwBackend 
+cd stwWebBackend 
 npm i
 ```
 its going to get a bit more tricky now so follow along closely
