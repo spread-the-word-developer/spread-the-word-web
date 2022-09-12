@@ -18,6 +18,7 @@ note that these steps are for windows but similar steps should work on other os'
 
 ```
 mkdir spreadTheWord
+cd spreadTheWord\
 ```
 
 2) make a new folder to host the backend repo and cd into it 
